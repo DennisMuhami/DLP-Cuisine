@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DLP Cuisine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--PRELOADER-->
+    <div id="preloader"></div>
+
+    <!--NAV BAR-->
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo">
+                <h1>DLP-Cuisine</h1>
+            </div>
+            <div class="list">
+                <ul>
+                    <li><a href="#">Our menu</a></li>
+                    <li><a href="#">Recipes</a></li>
+                    <li><a href="#">Popular</a></li>
+                    <li><a href="#">Seasonal</a></li>
+                </ul>
+            </div>
+            <div class="signIn">
+                <li><a href="#">sign in</a></li>
+                <li><a href="#">/register</a></li>
+            </div>
+        </div>
+    </nav>
+
+    <!--ADDRESS BAR-->
+    <div class="container2">
+        <div class="info">
+            <p class="p1">What would you like<br>to order?</p>
+            <p class="p2">Delivery and pick up now available</p>
+        </div>
+        <div class="address_info">
+            <label for="address">Enter your address</label><br>
+            <input type="text" class="address" name="adress">
+        </div>
+    </div>
+
+    <!--ADVERTISEMENT-->
+    <div class="advertisement">
+        <div class="image">
+            <img src="img/food4.jpg" alt="photo1">
+            <p class="p1">Now offering</p>
+            <p class="p2">Breakfast</p>
+            <p class="p3">Services</p>
+            <p class="p4">.</p>
+        </div>
+
+        <button><a href="#">See all</a></button>
+
+    </div>
+
+
+    <!--COMMENTS-->
+    <h2 class="community">From our community</h2>
+
+    <div class="comments">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+
+    <!--SEARCH BAR-->
+    <div class="container3">
+        <div class="header">
+            <p>Find more delicacies</p>
+        </div>
+        <div class="search_box">
+            <input type="text" name="food" class="search" >
+        </div>
+    </div>
+
+    <!--INFO BAR-->
+    <div class="info_bar">
+        <div class="contacts">
+            <a href="#">Insta</a>
+            <a href="#">X</a>
+            <a href="#">Facebook</a>
+            <a href="#">Email</a>
+        </div>
+
+        <div class="about_us">
+            <a href="#">Privacy policy</a>
+            <a href="#">Visitors agreement</a><br>
+            <a href="#">Advertise</a>
+            <a href="#">Do Not sell or share my personal information</a>
+        </div>
+    </div>
+
+
+    <script>
+
+        //PRELOADER
+        var loader = document.getElementById("preloader");
+
+        window.addEventListener("load", function(){
+            loader.style.display = "none";
+        })
+
+    </script>
+</body>
+</body>
+</html>
