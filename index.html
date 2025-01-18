@@ -18,21 +18,27 @@
                 <div class="logo">
                     <h1>DLP-Cuisine</h1>
                 </div>
-                <div class="list">
-                    <ul>
-                        <li><a href="#">Our menu</a></li>
-                        <li><a href="#">Recipes</a></li>
-                        <li><a href="#">Popular</a></li>
-                        <li><a href="#">Seasonal</a></li>
-                    </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
-                <div class="signIn">
-                    <li><a href="/sign-in/sign-in.html">sign in</a></li>
-                    <li><a href="/sign-in/sign-in.html">/register</a></li>
+                <div class="nav-content">
+                    <div class="list">
+                        <ul>
+                            <li><a href="#">Our Menu</a></li>
+                            <li><a href="#">Recipes</a></li>
+                            <li><a href="#">Popular</a></li>
+                            <li><a href="#">Seasonal</a></li>
+                        </ul>
+                    </div>
+                    <div class="signIn">
+                        <li><a href="/sign-in/sign-in.html">Sign In/Register</a></li>
+                        <!-- <li><a href="/sign-in/sign-in.html">Register</a></li> -->
+                    </div>
                 </div>
             </div>
         </nav>
-
         <!--ADDRESS BAR-->
         <div class="container2">
             <div class="info">
@@ -54,24 +60,8 @@
                 <p class="p3">Services</p>
                 <p class="p4">.</p>
             </div>
-            <!--ADVERTISEMENT-->
-            <div class="advertisement">
-                <div class="image">
-                    <img src="img/food4.jpg" alt="photo1">
-                    <p class="p1">Now offering</p>
-                    <p class="p2">Breakfast</p>
-                    <p class="p3">Services</p>
-                </div>
 
-                <button><a href="#">See all</a></button>
-
-            </div>
-
-
-            <!--COMMENTS-->
-            <h2 class="community">From our community</h2>
-
-
+            <button><a href="#">See all</a></button>
             <!--COMMENTS-->
             <h2 class="community">From our community</h2>
 
@@ -81,8 +71,8 @@
                         <div class="stars">⭐⭐⭐⭐⭐</div>
                         <h3>Amazing Breakfast!</h3>
                         <p>"The breakfast platter exceeded my expectations! The eggs were perfectly cooked, and the
-                            homemade bread was divine. The service was exceptional, and the atmosphere was perfect for
-                            starting my day."</p>
+                            homemade bread was divine. The service was exceptional, and the atmosphere was perfect
+                            for starting my day."</p>
                         <div class="reviewer">
                             <p class="name">- Sarah Johnson</p>
                             <p class="date">December 15, 2024</p>
@@ -93,9 +83,9 @@
                     <div class="review">
                         <div class="stars">⭐⭐⭐⭐⭐</div>
                         <h3>Best Local Restaurant</h3>
-                        <p>"I've been coming here for months now, and the quality has never disappointed. Their seasonal
-                            menu is always exciting, and the chef's specials are truly special. The attention to detail
-                            in every dish is remarkable."</p>
+                        <p>"I've been coming here for months now, and the quality has never disappointed. Their
+                            seasonal menu is always exciting, and the chef's specials are truly special. The
+                            attention to detail in every dish is remarkable."</p>
                         <div class="reviewer">
                             <p class="name">- Michael Chen</p>
                             <p class="date">January 2, 2025</p>
@@ -107,8 +97,8 @@
                         <div class="stars">⭐⭐⭐⭐⭐</div>
                         <h3>Outstanding Service</h3>
                         <p>"Not only is the food extraordinary, but the staff goes above and beyond to make you feel
-                            welcome. Their recommendations are always spot-on, and they handle dietary restrictions with
-                            great care."</p>
+                            welcome. Their recommendations are always spot-on, and they handle dietary restrictions
+                            with great care."</p>
                         <div class="reviewer">
                             <p class="name">- Emily Rodriguez</p>
                             <p class="date">January 10, 2025</p>
@@ -127,10 +117,12 @@
                 </div>
             </div>
 
+
+
             <!--INFO BAR-->
             <div class="info_bar">
                 <div class="contacts">
-                    <a href="#">Instagram</a>
+                    <a href="#">Insta</a>
                     <a href="#">X</a>
                     <a href="#">Facebook</a>
                     <a href="#">Email</a>
@@ -153,6 +145,34 @@
                 window.addEventListener("load", function () {
                     loader.style.display = "none";
                 })
+
+                // Hamburger Menu
+                const hamburger = document.querySelector('.hamburger');
+                const navContent = document.querySelector('.nav-content');
+                const navLinks = document.querySelectorAll('.list a, .signIn a');
+
+                hamburger.addEventListener('click', () => {
+                    hamburger.classList.toggle('active');
+                    navContent.classList.toggle('active');
+                });
+
+                // Close menu when clicking links
+                navLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        hamburger.classList.remove('active');
+                        navContent.classList.remove('active');
+                    });
+                });
+
+                // Close menu when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (!hamburger.contains(e.target) &&
+                        !navContent.contains(e.target) &&
+                        navContent.classList.contains('active')) {
+                        hamburger.classList.remove('active');
+                        navContent.classList.remove('active');
+                    }
+                });
 
             </script>
     </body>
