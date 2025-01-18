@@ -1,16 +1,18 @@
-
-*{
-    text-decoration: none;
+/* Base styles and reset */
+* {
     margin: 0;
-    padding: 0;;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
 }
 
-body{
+body {
     background-color: #e7e7e7;
+    min-height: 100vh;
 }
 
-/*---PRELOADER---*/
-#preloader{
+/* Preloader */
+#preloader {
     background: #fff url(img/1495.gif) no-repeat center center;
     height: 100vh;
     width: 100%;
@@ -18,187 +20,198 @@ body{
     z-index: 100;
 }
 
-/* ----NAV BAR----*/
-.logo{
-    color: orange;
-    position: absolute;
-    font-size: 1.8em;
-    font-style: italic;
-    font-weight: bold;
-    margin-top: 80px;
-    margin-left: 10px;
-}
-
-.navbar{
+/* Navigation */
+.navbar {
     background-color: #000;
     border-right: #fff 1px solid;
     border-bottom: #fff 1px solid;
     border-bottom-right-radius: 5px;
     height: 80px;
     position: sticky;
-    font-family: "calibri",sans-serif;
+    top: 0;
+    z-index: 10;
+    font-family: "calibri", sans-serif;
 }
 
-.navdiv{
+.navdiv {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    height: 100%;
 }
 
-.navdiv .list{
-    position: absolute;
-    margin-left: 32.5%;
-    margin-top: 100px;
-   
+.logo {
+    color: orange;
+    font-size: 1.8em;
+    font-style: italic;
+    font-weight: bold;
 }
 
-.navdiv .list li{
+.navdiv .list {
+    flex: 1;
+    text-align: center;
+    margin: 0 2rem;
+}
+
+.navdiv .list ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.navdiv .list li,
+.navdiv .signIn li {
     list-style: none;
-    display: inline-block;
 }
 
-.navdiv .list li a{
+.navdiv .list li a {
     color: #fff;
     font-size: 1.2em;
     font-weight: bold;
-    padding: 25px;
+    transition: color 0.3s ease;
 }
 
-
-.navdiv .signIn{
-    position: absolute;
-    margin-left: 90%;
-    margin-top: 100px;
+.navdiv .list li a:hover {
+    color: orange;
 }
 
-.navdiv .signIn li{
-    list-style: none;
-    display: inline-block;
+.navdiv .signIn {
+    display: flex;
+    gap: 0.5rem;
 }
 
-.navdiv .signIn li a{
+.navdiv .signIn li a {
     color: #fff;
     font-size: 1em;
     font-weight: 500;
+    transition: color 0.3s ease;
 }
 
+.navdiv .signIn li a:hover {
+    color: orange;
+}
 
-/*---ADDRESS BAR---*/
-.container2{
+/* Address Bar */
+.container2 {
     background-color: #000;
-    margin-left: 10vw;
-    height: 40vh;
+    margin: 0 auto;
     width: 80vw;
+    padding: 3rem;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.container2 .info{
-    position: absolute;
-}
-
-.container2 .info .p1{
-    text-align: center;
+.container2 .info .p1 {
     color: orange;
     font-size: 3em;
     font-family: sans-serif;
     font-weight: bold;
-    margin-left: 100px;
-    margin-top: 70px;
+    margin-bottom: 0.5rem;
 }
 
-.container2 .info .p2{
+.container2 .info .p2 {
     color: #bbbbbb;
     font-size: 1em;
     font-weight: 600;
     font-style: italic;
-    margin-left: 14vw;
 }
 
-.container2 .address_info{
-    position: absolute;
-    margin-left: 50vw;
-    margin-top: 15vh;
-    height: 60px;
+.container2 .address_info {
+    flex: 0 0 40%;
 }
 
-.container2 .address_info label{
+.container2 .address_info label {
     color: #fff;
     font-size: 1.1em;
     font-family: sans-serif;
+    display: block;
+    margin-bottom: 0.5rem;
 }
-.container2 .address_info input{
-    width: 25vw;
+
+.container2 .address_info input {
+    width: 100%;
     height: 5vh;
     border-radius: 5px;
     background-color: #bbbbbb;
+    border: none;
+    padding: 0 1rem;
 }
 
-/*---ADVERTISEMENT SECTION---*/
-.advertisement{
-    margin-top: 60px;
-    margin-left: 8vw;
-}
-
-.advertisement img{
+/* Advertisement Section */
+.advertisement {
+    margin: 4rem auto;
     width: 85vw;
+    position: relative;
 }
 
-.advertisement .image .p1{
+.advertisement img {
+    width: 100%;
+    height: auto;
+}
+
+.advertisement .image {
+    position: relative;
+}
+
+.advertisement .image p {
     position: absolute;
-    top: 90vh;
-    left: 10vw;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.advertisement .image .p1 {
+    top: 10%;
+    left: 10%;
     color: #fff;
-    font-size: 5em;
-    font-style: normal;
-    font-weight: bold;
-    font-family: sans-serif;
+    font-size: 3em;
 }
 
-.advertisement .image .p2{
-    position: absolute;
-    top: 105vh;
-    left: 20vw;
+.advertisement .image .p2 {
+    top: 30%;
+    left: 20%;
     color: orange;
-    font-size: 6em;
+    font-size: 4em;
     font-style: italic;
-    font-weight: bold;
-    font-family: sans-serif;
 }
 
-.advertisement .image .p3{
-    position: absolute;
-    top: 120vh;
-    left: 30vw;
+.advertisement .image .p3 {
+    top: 50%;
+    left: 30%;
     color: #fff;
-    font-size: 6em;
+    font-size: 4em;
     font-style: italic;
-    font-weight: bold;
-    font-family: sans-serif;
 }
 
-.advertisement .image .p4{
-    position: absolute;
-    top: 120vh;
-    left: 56vw;
+.advertisement .image .p4 {
+    top: 50%;
+    left: 56%;
     color: orange;
-    font-size: 6em;
-    font-weight: bold;
-    font-family: sans-serif;
+    font-size: 4em;
 }
 
-.advertisement button{
+.advertisement button {
     position: absolute;
-    top: 165vh;
-    left: 75vw;
+    bottom: -2rem;
+    right: 2rem;
     width: 180px;
     height: 70px;
     background-color: orange;
     border: 5px solid #fff;
     border-top-right-radius: 10px;
     border-bottom-left-radius: 10px;
-}    
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
 
-.advertisement button a{
+.advertisement button:hover {
+    transform: scale(1.05);
+}
+
+.advertisement button a {
     font-size: 3em;
     font-style: italic;
     font-weight: bolder;
@@ -206,92 +219,270 @@ body{
     color: black;
 }
 
-/*---COMMENTS---*/
-.community{
-    position: absolute;
+/* Comments Section */
+.community {
     font-size: 3.5em;
     font-family: sans-serif;
     font-weight: 600;
-    margin-left: 5vw;
-    margin-top: 5vh;
+    margin: 2rem 5vw;
 }
 
-.comments{
-    margin-top: 60px;
-    margin-left: 10px;
-    height: 80vh;
+.comments {
+    padding: 2rem 5vw;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
 }
 
-.comments .box1{
-    position: absolute;
+.comments .box1,
+.comments .box2,
+.comments .box3 {
+    flex: 1;
     border: #707070 solid 3px;
     border-radius: 10px;
-    margin-left: 5vw;
-    margin-top: 50px;
     height: 60vh;
-    width: 28vw;
+    transition: transform 0.3s ease;
+    padding: 2rem;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-.comments .box2{
-    position: absolute;
-    border: #707070 solid 3px;
-    border-radius: 10px;
-    margin-left: 35vw;
-    margin-top: 50px;
-    height: 60vh;
-    width: 28vw;
+
+.review {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
-.comments .box3{
-    position: absolute;
-    border: #707070 solid 3px;
-    border-radius: 10px;
-    margin-left: 65vw;
-    margin-top: 50px;
-    height: 60vh;
-    width: 28vw;
+
+.review .stars {
+    font-size: 1.2em;
+    color: #ffd700;
+}
+
+.review h3 {
+    font-size: 1.5em;
+    color: #333;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+.review p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #666;
+    font-family: sans-serif;
+}
+
+.reviewer {
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.reviewer .name {
+    font-weight: 600;
+    color: #333;
+}
+
+.reviewer .date {
+    font-size: 0.9em;
+    color: #888;
 }
 
 
-/*---SEARCH BAR---*/
-.container3{
+/* Search Bar */
+.container3 {
     border: #000 2px solid;
-    height: 40vh;
+    padding: 2rem;
     background-color: #bdbdbd;
 }
 
-.container3 .header{
+.container3 .header {
     font-size: 3em;
     font-weight: 600;
     font-family: sans-serif;
     text-align: center;
-    margin-top: 10vh;
+    margin-bottom: 2rem;
 }
 
-.container3 .search_box .search{
-    width: 90vw;
+.container3 .search_box .search {
+    width: 90%;
     height: 6vh;
     border-radius: 30px;
-    margin-left: 4.5vw;
+    margin: 0 5%;
+    padding: 0 2rem;
+    border: none;
 }
 
-
-/*---INFO BAR---*/
-.info_bar{
+/* Footer */
+.info_bar {
+    background-color: #000;
+    padding: 2rem;
+    color: #fff;
     display: flex;
     justify-content: space-between;
-    height: 20vh;
-    background-color: #000 ;
 }
 
-.info_bar .contacts{
-    outline: #fff 2px solid;
-    font-family: sans-serif;
+.info_bar .contacts {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
 }
 
-
-.info_bar .about_us{
-    outline: #fff 2px solid;
-
+.info_bar .contacts a {
+    color: #fff;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
 }
 
+.info_bar .contacts a:hover {
+    color: orange;
+}
 
+.info_bar .about_us {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    max-width: 400px;
+}
 
+.info_bar .about_us a {
+    color: #fff;
+    font-size: 0.9em;
+    transition: color 0.3s ease;
+}
+
+.info_bar .about_us a:hover {
+    color: orange;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+    .navbar {
+        height: auto;
+        padding: 1rem;
+        position: static;
+    }
+
+    .navdiv {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .logo {
+        position: static;
+        margin: 0;
+        padding: 1rem 0;
+    }
+
+    .navdiv .list {
+        display: block;
+        width: 100%;
+        margin: 1rem 0;
+        text-align: center;
+    }
+
+    .navdiv .list ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .navdiv .list li a {
+        display: block;
+        padding: 0.5rem;
+        font-size: 1.1em;
+    }
+
+    .navdiv .signIn {
+        width: 100%;
+        justify-content: center;
+        margin: 1rem 0;
+    }
+
+    /* Advertisement section adjustments */
+    .advertisement .image .p1 {
+        top: 10%;
+        left: 5%;
+        font-size: 2.5em;
+    }
+
+    .advertisement .image .p2 {
+        top: 30%;
+        left: 15%;
+        font-size: 3em;
+    }
+
+    .advertisement .image .p3 {
+        top: 50%;
+        left: 25%;
+        font-size: 3em;
+    }
+
+    .advertisement .image .p4 {
+        top: 50%;
+        left: 65%;
+        font-size: 3em;
+    }
+
+    .comments {
+        flex-direction: column;
+    }
+    
+    .comments .box1,
+    .comments .box2,
+    .comments .box3 {
+        height: auto;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+
+    }
+
+    .review h3 {
+        font-size: 1.3em;
+    }
+
+    .info_bar .contacts,
+    .info_bar .about_us {
+        flex-direction: column;
+        align-items: center;
+    }
+
+   
+}
+
+@media screen and (max-width: 768px) {
+    .navbar{
+        position: static;
+    }
+    .navdiv .signIn {
+        display: flex;
+    }
+
+    .advertisement .image .p1 {
+        font-size: 2em;
+    }
+
+    .advertisement .image .p2,
+    .advertisement .image .p3,
+    .advertisement .image .p4 {
+        font-size: 2.5em;
+    }
+    .review p {
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .advertisement .image .p1 {
+        font-size: 1.5em;
+    }
+
+    .advertisement .image .p2,
+    .advertisement .image .p3,
+    .advertisement .image .p4 {
+        font-size: 2em;
+    }
+}
