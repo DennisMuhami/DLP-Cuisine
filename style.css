@@ -143,18 +143,24 @@ body {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.image .p1 { top: 10%;  left: 10%;
+.image .p1 { 
+    top: 10%;  
+    left: 10%;
     color: #fff;
     font-size: 3em;
  }
-.image .p2 { top: 30%;   left: 20%;
+
+
+.image .p2 {
+    top: 30%;
+    left: 20%;
     color: orange;
-    font-size: 4em;
+    font-size: 6em;
     font-style: italic;
  }
 .image .p3 { top: 50%;  left: 30%;
     color: #fff;
-    font-size: 4em;
+    font-size: 6em;
     font-style: italic;
  }
 
