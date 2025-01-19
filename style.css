@@ -167,14 +167,14 @@ body {
     top: 10%;
     left: 10%;
     color: #fff;
-    font-size: 3em;
+    font-size: 5em;
 }
 
 .advertisement .image .p2 {
     top: 30%;
     left: 20%;
     color: orange;
-    font-size: 4em;
+    font-size: 6em;
     font-style: italic;
 }
 
@@ -182,7 +182,7 @@ body {
     top: 50%;
     left: 30%;
     color: #fff;
-    font-size: 4em;
+    font-size: 6em;
     font-style: italic;
 }
 
