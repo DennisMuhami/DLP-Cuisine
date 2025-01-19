@@ -155,9 +155,10 @@ body {
     top: 30%;
     left: 20%;
     color: orange;
-    font-size: 6em;
+    font-size: 5em;
     font-style: italic;
  }
+
 .image .p3 { top: 50%;  left: 30%;
     color: #fff;
     font-size: 6em;
@@ -165,8 +166,8 @@ body {
  }
 
  .image .p4 {
-    top: 50%;
-    left: 56%;
+    top: 60%;
+    left: 65%;
     color: orange;
     font-size: 4em;
 }
